@@ -85,3 +85,29 @@ A responsive social media app where user can post images, like and unlike other 
 ### - Run the backend server
 
 - npm start
+
+## Contribution Guidelines
+
+Thank you for considering contributing to our academic project, GRAM! Your contributions are valuable, and we appreciate your efforts to enhance our project.
+
+### Contribution Steps
+
+1. Fork the project.
+2. Create a new branch: `git checkout -b feature/your-feature`.
+3. Implement your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature`.
+5. Submit a pull request.
+
+### Contribution Guidelines
+
+- Follow the coding conventions and guidelines provided.
+- Ensure that your code is clear, concise, and well-documented.
+- Adhere to ethical coding practices.
+- Provide detailed commit messages.
+
+We strive to maintain a collaborative and inclusive environment for academic contributions. Please respect our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License Information
+
+InstaClone is an open-source academic project, and its source code is licensed under the [MIT License](LICENSE). You are encouraged to use, modify, and distribute the code following the terms specified in the license.
+
