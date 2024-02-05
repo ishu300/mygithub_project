@@ -2,8 +2,7 @@ import React, {useEffect , useState} from "react";
 import "./Profile.css";
 import PostDetail from "./PostDetail";
 import ProfilePic from "./ProfilePic";
-import BioForm from "./BioForm";
-import axios from "axios";
+
 
 export default function Profile() {
     var picLink = "https://cdn-icons-png.flaticon.com/128/3177/3177440.png"
@@ -24,12 +23,7 @@ export default function Profile() {
   };
 
 
-  const setUserBio = (newBio) => {
-    setUser((prevUser) => ({
-      ...prevUser,
-      bio: newBio,
-    }));
-  };
+  
   
   const changeprofile = () => {
     if (changePic) {
@@ -69,7 +63,7 @@ export default function Profile() {
                     <p> {user.followers ? user.followers.length : "0"} followers</p>
                     <p> {user.following ? user.following.length : "0"} following</p>
                   </div>
-                  <BioForm userId={user._id} currentBio={user.bio} onUpdateBio={setUserBio} />
+                  
                 </div>
             </div>
             <hr style={{

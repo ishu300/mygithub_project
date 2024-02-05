@@ -16,39 +16,42 @@ export default function SignIn() {
  const notifyA = (msg) => toast.error(msg)
  const notifyB = (msg) => toast.success(msg)
 
+
  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
- const postData = () => {
-   //checking email
-   if (!emailRegex.test(email)) {
-     notifyA("Invalid email")
-     return
-   }
-   // Sending data to server
-   fetch("/signin", {
-     method: "post",
-     headers: {
-       "Content-Type": "application/json"
-     },
-     body: JSON.stringify({
-       email: email,
-       password: password
+const postData = () => {
+  //checking email
+  if (!emailRegex.test(email)) {
+    notifyA("Invalid email")
+    return
+  }
+  // Sending data to server
+  fetch("/signin", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password
 
-     })
-   }).then(res => res.json())
-     .then(data => {
-       if (data.error) {
-         notifyA(data.message)
-       } else {
-         notifyB("Signed In Successfully")
-         localStorage.setItem("jwt" , data.token)
-         localStorage.setItem("user" , JSON.stringify(data.user) )
-         setUserLogin(true)
-         navigate("/")
-       }
-      // console.log(data)
-     })
- }
+    })
+  }).then(res => res.json())
+    .then(data => {
+      if (data.error) {
+        notifyA(data.error)
+      } else {
+        notifyB("Signed In Successfully")
+        console.log(data)
+        localStorage.setItem("jwt", data.token)
+        localStorage.setItem("user", JSON.stringify(data.user))
+
+        setUserLogin(true)
+        navigate("/")
+      }
+      console.log(data)
+    })
+}
 
 
     return(
