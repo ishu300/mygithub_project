@@ -54,7 +54,7 @@ A responsive social media app where user can post images, like and unlike other 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yogitaRajdeo/the-gram-instaclone.git
+   git clone https://github.com/ishu300/mygithub_project.git
    ```
 
 ## For frontend
